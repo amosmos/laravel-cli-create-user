@@ -1,0 +1,34 @@
+{
+    "name": "amosmos/laravel-add-user",
+    "description": "A command to add users to a laravel application from the cli",
+    "keywords": [
+        "BOA Ideas",
+        "user",
+        "eloquent",
+        "database",
+        "laravel-add-user"
+    ],
+    "homepage": "https://github.com/amosmos/laravel-add-user",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Amos Shacham",
+            "email": "amos@boaideas.com",
+            "homepage": "https://boaideas.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "illuminate/console": "^5.3.28",
+        "illuminate/events": "^5.3.28"
+    },
+    "autoload": {
+        "psr-4": {
+            "BOAIdeas\\AddUser\\": "src"
+        }
+    },
+    "config": {
+        "sort-packages": true
+  }
+}
