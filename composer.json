@@ -1,5 +1,5 @@
 {
-    "name": "amosmos/laravel-add-user",
+    "name": "boaideas/laravel-add-user",
     "description": "A command to add users to a laravel application from the cli",
     "keywords": [
         "BOA Ideas",
