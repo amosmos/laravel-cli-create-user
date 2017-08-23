@@ -30,10 +30,10 @@ class ListUsers extends Command
         $model = config('createuser.model');
         $users = $model::all(['id', 'name', 'email', 'created_at', 'updated_at'])->toArray();
 
-        if ($users->count()) {
+        if (count($users)) {
             $headers = ['ID', 'Name', 'E-mail', 'Created at', 'Updated at'];
 
-            $this->info('There are '.$users->count().' users:');
+            $this->info('There are '.count($users).' users:');
             $this->table($headers, $users);
         } else {
             $this->error('There are no users!');
