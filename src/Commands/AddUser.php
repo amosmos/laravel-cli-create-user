@@ -2,8 +2,8 @@
 
 namespace BOAIdeas\AddUser\Commands;
 
-use Illuminate\Console\Command;
 use App\User;
+use Illuminate\Console\Command;
 
 class AddUser extends Command
 {
@@ -33,11 +33,10 @@ class AddUser extends Command
         $password = $this->ask('User password');
 
         User::create([
-            'name' => $name,
-            'email' => $email,
+            'name'     => $name,
+            'email'    => $email,
             'password' => bcrypt($password),
             ]);
         $this->info('New user created!');
     }
-
 }
