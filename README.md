@@ -1,12 +1,12 @@
-# Easily create Laravel users with a CLI command
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/boaideas/laravel-cli-create-user.svg?style=flat-square)](https://packagist.org/packages/boaideas/laravel-cli-create-user)
-[![Software License](https://img.shields.io/packagist/l/boaideas/laravel-cli-create-user.svg?style=flat-square)](LICENSE.md)
+# Easily create (and list) Laravel users with a CLI command
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/boaideas/laravel-cli-create-user.svg)](https://packagist.org/packages/boaideas/laravel-cli-create-user)
+[![Software License](https://img.shields.io/packagist/l/boaideas/laravel-cli-create-user.svg)](LICENSE.md)
 [![StyleCI](https://styleci.io/repos/100930843/shield?branch=master)](https://styleci.io/repos/100930843)
-[![Total Downloads](https://img.shields.io/packagist/dt/boaideas/laravel-cli-create-user.svg?style=flat-square)](https://packagist.org/packages/boaideas/laravel-cli-create-user)
+[![Total Downloads](https://img.shields.io/packagist/dt/boaideas/laravel-cli-create-user.svg)](https://packagist.org/packages/boaideas/laravel-cli-create-user)
 
 In our projects we build a lot of admin systems for websites, and we use Laravel authentication for admin log-in to the system. Once the site is launched we always create admin accounts for our customers to log in to the production site.
 
-Using this artisan command it's easy to create admin accounts from the CLI whenever you need them.
+Using this artisan command it's easy to create admin accounts from the CLI whenever you need them. We also added a command to list all existing users.
 
 ## Requirements
 
