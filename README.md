@@ -1,6 +1,6 @@
 # Easily create Laravel users with a CLI command
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/boaideas/laravel-cli-create-user.svg?style=flat-square)](https://packagist.org/packages/boaideas/laravel-cli-create-user)
-[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
+[![Software License](https://img.shields.io/packagist/l/boaideas/laravel-cli-create-user.svg?style=flat-square)](LICENSE.md)
 [![StyleCI](https://styleci.io/repos/100930843/shield?branch=master)](https://styleci.io/repos/100930843)
 [![Total Downloads](https://img.shields.io/packagist/dt/boaideas/laravel-cli-create-user.svg?style=flat-square)](https://packagist.org/packages/boaideas/laravel-cli-create-user)
 
@@ -52,13 +52,21 @@ return [
 
 ## Usage
 
-From youe CLI you can execute:
+#### Create User
+From youe CLI execute:
 
 ```bash
 php artisan user:create
 ```
 
 You will be asked for the user's name, email and password, and then the user account will be created.
+
+#### List Users
+From youe CLI execute:
+
+```bash
+php artisan user:list
+```
 
 ## Credits
 
