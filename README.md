@@ -4,7 +4,7 @@
 [![StyleCI](https://styleci.io/repos/100930843/shield?branch=master)](https://styleci.io/repos/100930843)
 [![Total Downloads](https://img.shields.io/packagist/dt/boaideas/laravel-cli-create-user.svg?style=flat-square)](https://packagist.org/packages/boaideas/laravel-cli-create-user)
 
-In our projects we build a lot of admin system for website, and we use Laravel authentication for admin log in to the system. Once the site is launched we always create admin accounts for our customers to log in to the production site.
+In our projects we build a lot of admin systems for websites, and we use Laravel authentication for admin log-in to the system. Once the site is launched we always create admin accounts for our customers to log in to the production site.
 
 Using this artisan command it's easy to create admin accounts from the CLI whenever you need them.
 
