@@ -33,7 +33,7 @@ class CreateUser extends Command
 
         $model = config('createuser.model');
 
-        $user = new $model;
+        $user = new $model();
 
         $model::fill([
             'name'     => $name,
