@@ -1,8 +1,8 @@
 # Easily add Laravel users with a CLI command
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/boaideas/laravel-add-user.svg?style=flat-square)](https://packagist.org/packages/boaideas/laravel-add-user)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/boaideas/laravel-cli-create-user.svg?style=flat-square)](https://packagist.org/packages/boaideas/laravel-cli-create-user)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![StyleCI](https://styleci.io/repos/100930843/shield?branch=master)](https://styleci.io/repos/100930843)
-[![Total Downloads](https://img.shields.io/packagist/dt/boaideas/laravel-add-user.svg?style=flat-square)](https://packagist.org/packages/boaideas/laravel-add-user)
+[![Total Downloads](https://img.shields.io/packagist/dt/boaideas/laravel-cli-create-user.svg?style=flat-square)](https://packagist.org/packages/boaideas/laravel-cli-create-user)
 
 In our projects we build a lot of admin system for website, and we use Laravel authentication for admin log in to the system. Once the site is launched we always add admin accounts for our customers to log in to the production site.
 
