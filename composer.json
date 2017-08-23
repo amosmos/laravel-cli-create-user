@@ -2,6 +2,7 @@
     "name": "boaideas/laravel-cli-create-user",
     "description": "An artisan command to create users in a laravel application from the cli",
     "keywords": [
+        "Laravel",
         "BOA Ideas",
         "user",
         "create",
