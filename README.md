@@ -31,7 +31,7 @@ Next, install the `BOAIdeas\CreateUser\Commands\CreateUserServiceProvider` servi
 ];
 ```
 
-This package has support for Laravel's auto package discovery, which will be available from version 5.5 onwards.
+__Note - Laravel 5.5:__ This package has support for Laravel's auto package discovery, which will be available from version 5.5 onwards.
 
 You can publish the config-file with:
 
