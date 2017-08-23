@@ -38,3 +38,14 @@ From youe CLI you can execute:
 ```bash
 php artisan user:create
 ```
+
+You will be asked for the user's name, email and password, and then the user account will be created.
+
+## Credits
+
+- [Amos Shacham](https://github.com/amosmos)
+- [All Contributors](../../contributors)
+
+## License
+
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
