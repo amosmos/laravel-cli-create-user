@@ -9,7 +9,7 @@
         "artisan",
         "eloquent",
         "database",
-        "laravel-add-user"
+        "laravel-create-user"
     ],
     "homepage": "https://github.com/amosmos/laravel-cli-create-user",
     "license": "MIT",
