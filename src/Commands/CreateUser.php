@@ -35,11 +35,11 @@ class CreateUser extends Command
 
         $user = new $model();
 
-        $model::fill([
-            'name'     => $name,
-            'email'    => $email,
-            'password' => bcrypt($password),
-            ]);
+        $user->name = $name;
+        $user->email = $email;
+        $user->password = bcrypt($password);
+
+        $user->save();
 
         $this->info('New user created!');
     }
