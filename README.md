@@ -10,7 +10,7 @@ Using this artisan command it's easy to create admin accounts from the CLI whene
 
 ## Requirements
 
-This command assumes you're using the regular and original Laravel User model.
+This command assumes you're using the regular and original Laravel User model (of course you can name it whatever you like).
 
 ## Installation
 
@@ -20,15 +20,34 @@ You can install the package via composer:
 composer require boaideas/laravel-cli-create-user
 ```
 
-Next add the `BOAIdeas\CreateUser\Commands\CreateUser` class to your console kernel.
+Next, install the `BOAIdeas\CreateUser\Commands\CreateUserServiceProvider` service provider:
 
 ```php
-// app/Console/Kernel.php
+// config/app.php
 
-protected $commands = [
-   ...
-    \BOAIdeas\CreateUser\Commands\CreateUser::class,
-]
+'providers' => [
+    ...
+    BOAIdeas\CreateUser\Commands\CreateUserServiceProvider::class,
+];
+```
+
+This package has support for Laravel's auto package discovery, which will be available from version 5.5 onwards.
+
+You can publish the config-file with:
+
+```bash
+php artisan vendor:publish --provider="BOAIdeas\CreateUser\Commands\CreateUserServiceProvider"
+```
+
+This is the contents of the published config file:
+
+```php
+return [
+    /*
+    * The class name of the media model to be used.
+    */
+    'model' => 'App\User'
+];
 ```
 
 ## Usage

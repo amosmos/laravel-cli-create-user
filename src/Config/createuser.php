@@ -1,5 +1,9 @@
 <?php
 
 return [
-    'model' => 'App\User',
+    /*
+    * The class name of the user model to be used.
+    */
+    'model' => 'App\User'
+
 ];

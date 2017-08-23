@@ -32,7 +32,14 @@
             "BOAIdeas\\CreateUser\\": "src"
         }
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "BOAIdeas\\CreateUser\\CreateUserServiceProvider"
+            ],
+        }
+    }
     "config": {
         "sort-packages": true
-  }
+    }
 }
