@@ -65,6 +65,12 @@ You will be asked for the user's name, email and password, and then the user acc
 - [Amos Shacham](https://github.com/amosmos)
 - [All Contributors](../../contributors)
 
+## Alternatives
+
+- [laravel-make-user](https://github.com/michaeldyrynda/laravel-make-user)
+- [laravel-cli-user](https://github.com/subdesign/laravel-cli-user)
+- [create-user-command](https://github.com/rap2hpoutre/create-user-command)
+
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
