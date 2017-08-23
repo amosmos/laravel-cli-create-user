@@ -36,7 +36,7 @@
         "laravel": {
             "providers": [
                 "BOAIdeas\\CreateUser\\CreateUserServiceProvider"
-            ],
+            ]
         }
     },
     "config": {
