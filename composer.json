@@ -1,14 +1,17 @@
 {
-    "name": "boaideas/laravel-add-user",
-    "description": "A command to add users to a laravel application from the cli",
+    "name": "boaideas/laravel-cli-create-user",
+    "description": "An artusan command to create users in a laravel application from the cli",
     "keywords": [
         "BOA Ideas",
         "user",
+        "create",
+        "cli",
+        "artisan",
         "eloquent",
         "database",
         "laravel-add-user"
     ],
-    "homepage": "https://github.com/amosmos/laravel-add-user",
+    "homepage": "https://github.com/amosmos/laravel-cli-create-user",
     "license": "MIT",
     "authors": [
         {
@@ -25,7 +28,7 @@
     },
     "autoload": {
         "psr-4": {
-            "BOAIdeas\\AddUser\\": "src"
+            "BOAIdeas\\CreateUser\\": "src"
         }
     },
     "config": {
