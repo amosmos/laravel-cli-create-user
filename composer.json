@@ -1,6 +1,6 @@
 {
     "name": "boaideas/laravel-cli-create-user",
-    "description": "An artusan command to create users in a laravel application from the cli",
+    "description": "An artisan command to create users in a laravel application from the cli",
     "keywords": [
         "BOA Ideas",
         "user",
