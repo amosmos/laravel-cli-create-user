@@ -41,4 +41,5 @@ class ListUsers extends Command
         {
             $this->error('There are no users!');
         }
+    }
 }
