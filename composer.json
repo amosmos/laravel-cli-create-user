@@ -38,7 +38,7 @@
                 "BOAIdeas\\CreateUser\\CreateUserServiceProvider"
             ],
         }
-    }
+    },
     "config": {
         "sort-packages": true
     }
