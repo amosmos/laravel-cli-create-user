@@ -1,11 +1,11 @@
 <?php
 
-namespace BOAIdeas\AddUser\Commands;
+namespace BOAIdeas\CreateUser\Commands;
 
 use App\User;
 use Illuminate\Console\Command;
 
-class AddUser extends Command
+class CreateUser extends Command
 {
     /**
      * The console command name.
@@ -19,7 +19,7 @@ class AddUser extends Command
      *
      * @var string
      */
-    protected $description = 'Add a new laravel user';
+    protected $description = 'Create a new laravel user';
 
     /**
      * Execute the console command.
