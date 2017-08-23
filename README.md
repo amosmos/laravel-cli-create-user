@@ -17,17 +17,17 @@ This command assumes you're using the regular and original Laravel User model.
 You can install the package via composer:
 
 ```bash
-composer require boaideas/laravel-add-user
+composer require boaideas/laravel-cli-create-user
 ```
 
-Next add the `BOAIdeas\AddUser\Commands\AddUser` class to your console kernel.
+Next add the `BOAIdeas\CreateUser\Commands\CreateUser` class to your console kernel.
 
 ```php
 // app/Console/Kernel.php
 
 protected $commands = [
    ...
-    \BOAIdeas\AddUser\Commands\AddUser::class,
+    \BOAIdeas\CreateUser\Commands\CreateUser::class,
 ]
 ```
 
