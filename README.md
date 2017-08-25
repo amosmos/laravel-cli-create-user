@@ -20,14 +20,14 @@ You can install the package via composer:
 composer require boaideas/laravel-cli-create-user
 ```
 
-Next, install the `BOAIdeas\CreateUser\Commands\CreateUserServiceProvider` service provider:
+Next, install the `BOAIdeas\CreateUser\CreateUserServiceProvider` service provider:
 
 ```php
 // config/app.php
 
 'providers' => [
     ...
-    BOAIdeas\CreateUser\Commands\CreateUserServiceProvider::class,
+    BOAIdeas\CreateUser\CreateUserServiceProvider::class,
 ];
 ```
 
@@ -36,7 +36,7 @@ __Note - Laravel 5.5:__ This package has support for Laravel's auto package disc
 You can publish the config-file with:
 
 ```bash
-php artisan vendor:publish --provider="BOAIdeas\CreateUser\Commands\CreateUserServiceProvider"
+php artisan vendor:publish --provider="BOAIdeas\CreateUser\CreateUserServiceProvider"
 ```
 
 This is the contents of the published config file:
