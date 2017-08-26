@@ -1,8 +1,8 @@
 # Easily create (and list) Laravel users with a CLI command
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/boaideas/laravel-cli-create-user.svg)](https://packagist.org/packages/boaideas/laravel-cli-create-user)
-[![Software License](https://img.shields.io/packagist/l/boaideas/laravel-cli-create-user.svg)](LICENSE.md)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/boaideas/laravel-cli-create-user.svg?style=flat-square)](https://packagist.org/packages/boaideas/laravel-cli-create-user)
+[![Software License](https://img.shields.io/packagist/l/boaideas/laravel-cli-create-user.svg?style=flat-square)](LICENSE.md)
 [![StyleCI](https://styleci.io/repos/100930843/shield?branch=master)](https://styleci.io/repos/100930843)
-[![Total Downloads](https://img.shields.io/packagist/dt/boaideas/laravel-cli-create-user.svg)](https://packagist.org/packages/boaideas/laravel-cli-create-user)
+[![Total Downloads](https://img.shields.io/packagist/dt/boaideas/laravel-cli-create-user.svg?style=flat-square)](https://packagist.org/packages/boaideas/laravel-cli-create-user)
 
 In our projects we build a lot of admin systems for websites, and we use Laravel authentication for admin log-in to the system. Once the site is launched we always create admin accounts for our customers to log in to the production site.
 
@@ -20,7 +20,9 @@ You can install the package via composer:
 composer require boaideas/laravel-cli-create-user
 ```
 
-Next, install the `BOAIdeas\CreateUser\CreateUserServiceProvider` service provider:
+If you're installing the package on Laravel 5.5 or higher, you're done (The package uses Laravel's auto package discovery which will be available from version 5.5 onwards.).
+
+If you're using Laravel 5.4 or less, install the `BOAIdeas\CreateUser\CreateUserServiceProvider` service provider:
 
 ```php
 // config/app.php
@@ -31,12 +33,13 @@ Next, install the `BOAIdeas\CreateUser\CreateUserServiceProvider` service provid
 ];
 ```
 
-__Note - Laravel 5.5:__ This package has support for Laravel's auto package discovery, which will be available from version 5.5 onwards.
+## Configuration
 
-You can publish the config-file with:
+By default, the package assumes your User model is called User. If you're using a different name, you can publish the config-file with:
 
 ```bash
-php artisan vendor:publish --provider="BOAIdeas\CreateUser\CreateUserServiceProvider"
+php artisan vendor:publish --provider="BOAIdeas\Create
+\CreateUserServiceProvider"
 ```
 
 This is the contents of the published config file:
@@ -81,4 +84,4 @@ php artisan user:list
 
 ## License
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+The MIT License (MIT). Please see [License File](LICENSE) for more information.
