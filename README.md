@@ -10,7 +10,7 @@ Using this artisan command it's easy to create admin accounts from the CLI whene
 
 ## Requirements
 
-This package was based on the defaul User model that ships with Laravel, so it assumes you're using a User model (you can name it anything you want) with name, email and password fields.
+The package is based on the defaul User model that ships with Laravel, so it assumes you're using a User model (you can name it anything you want) with name, email and password fields.
 
 ## Installation
 
