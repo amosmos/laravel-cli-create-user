@@ -38,8 +38,7 @@ If you're using Laravel 5.4 or less, install the `BOAIdeas\CreateUser\CreateUser
 By default, the package assumes your User model is called User. If you're using a different name, you can publish the config-file with:
 
 ```bash
-php artisan vendor:publish --provider="BOAIdeas\Create
-\CreateUserServiceProvider"
+php artisan vendor:publish --provider="BOAIdeas\CreateUser\CreateUserServiceProvider"
 ```
 
 This is the contents of the published config file:
