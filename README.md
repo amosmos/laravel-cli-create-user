@@ -10,7 +10,7 @@ Using this artisan command it's easy to create admin accounts from the CLI whene
 
 ## Requirements
 
-This command assumes you're using the regular and original Laravel User model (of course you can name it whatever you like).
+This package was based on the defaul User model that ships with Laravel, so it assumes you're using a User model (you can name it anything you want) with name, email and password fields.
 
 ## Installation
 
@@ -20,7 +20,7 @@ You can install the package via composer:
 composer require boaideas/laravel-cli-create-user
 ```
 
-If you're installing the package on Laravel 5.5 or higher, you're done (The package uses Laravel's auto package discovery which will be available from version 5.5 onwards.).
+If you're installing the package on Laravel 5.5 or higher, you're done (The package uses Laravel's auto package discovery which will be available from version 5.5 onwards).
 
 If you're using Laravel 5.4 or less, install the `BOAIdeas\CreateUser\CreateUserServiceProvider` service provider:
 
