@@ -3,6 +3,7 @@
 namespace BOAIdeas\CreateUser\Commands;
 
 use Illuminate\Console\Command;
+use Validator;
 
 class CreateUser extends Command
 {
@@ -27,9 +28,9 @@ class CreateUser extends Command
      */
     public function handle()
     {
-        $name = $this->ask('User name');
-        $email = $this->ask('User email');
-        $password = $this->ask('User password');
+        $name = $this->validate_ask('User name',['name' => config('createuser.validation_rules.name')]);
+        $email = $this->validate_ask('User email',['email' => config('createuser.validation_rules.email')]);
+        $password = $this->validate_ask('User password',['password' => config('createuser.validation_rules.password')]);
 
         $model = config('createuser.model');
 
@@ -42,5 +43,30 @@ class CreateUser extends Command
         $user->save();
 
         $this->info('New user created!');
+    }
+
+    public function validate_ask($question, $rules)
+    {
+        $value = $this->ask($question);
+
+        $validate = $this->validateInput($rules, $value);
+
+        if ($validate !== true) {
+            $this->error($validate);
+            $value = $this->validate_ask($question, $rules);
+        }
+
+        return $value;
+    }
+
+    public function validateInput($rules, $value)
+    {
+        $validator = Validator::make([key($rules) => $value], $rules);
+
+        if ($validator->fails())
+            return $error = $validator->errors()->first(key($rules));
+
+        return true;
+
     }
 }

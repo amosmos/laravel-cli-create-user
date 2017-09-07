@@ -10,7 +10,7 @@ Using this artisan command it's easy to create admin accounts from the CLI whene
 
 ## Requirements
 
-The package is based on the defaul User model that ships with Laravel, so it assumes you're using a User model (you can name it anything you want) with name, email and password fields.
+The package is based on the defaul User model that ships with Laravel, so it assumes you're using a User model with name, email and password fields (and of course that these fields are migrated to your DB). Of course the package lets you change the default "User" model name if you're using a different name.
 
 ## Installation
 
@@ -35,20 +35,32 @@ If you're using Laravel 5.4 or less, install the `BOAIdeas\CreateUser\CreateUser
 
 ## Configuration
 
-By default, the package assumes your User model is called User. If you're using a different name, you can publish the config-file with:
+By default, the package assumes your User model is called User and validates your model input with the default validation rules that Laravel uses for uses creation.
+
+If you want to change any of these settings, you can publish the config-file with:
 
 ```bash
 php artisan vendor:publish --provider="BOAIdeas\CreateUser\CreateUserServiceProvider"
 ```
 
-This is the contents of the published config file:
+This is the content of the published config file:
 
 ```php
 return [
     /*
     * The class name of the media model to be used.
     */
-    'model' => 'App\User'
+    'model' => 'App\User',
+
+    /*
+    * The validation rules to check for user model input.
+    */
+    'validation_rules' => [
+    	'name' => 'string|max:255',
+    	'email' => 'string|email|max:255|unique:users',
+    	'password' => 'string|min:6',
+    ],
+
 ];
 ```
 
@@ -61,7 +73,7 @@ From youe CLI execute:
 php artisan user:create
 ```
 
-You will be asked for the user's name, email and password, and then the user account will be created.
+You will be asked for the user's name, email and password, and then the user account will be created. Your input will be validated.
 
 #### List Users
 From youe CLI execute:
