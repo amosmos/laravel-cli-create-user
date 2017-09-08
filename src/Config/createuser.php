@@ -10,9 +10,9 @@ return [
     * The validation rules to check for user model input.
     */
     'validation_rules' => [
-    	'name' => 'string|max:255',
-    	'email' => 'string|email|max:255|unique:users',
-    	'password' => 'string|min:6',
+        'name'     => 'string|max:255',
+        'email'    => 'string|email|max:255|unique:users',
+        'password' => 'string|min:6',
     ],
 
 ];
