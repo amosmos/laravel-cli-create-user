@@ -28,9 +28,9 @@ class CreateUser extends Command
      */
     public function handle()
     {
-        $name = $this->validate_ask('User name',['name' => config('createuser.validation_rules.name')]);
-        $email = $this->validate_ask('User email',['email' => config('createuser.validation_rules.email')]);
-        $password = $this->validate_ask('User password',['password' => config('createuser.validation_rules.password')]);
+        $name = $this->validate_ask('User name', ['name' => config('createuser.validation_rules.name')]);
+        $email = $this->validate_ask('User email', ['email' => config('createuser.validation_rules.email')]);
+        $password = $this->validate_ask('User password', ['password' => config('createuser.validation_rules.password')]);
 
         $model = config('createuser.model');
 
@@ -63,10 +63,10 @@ class CreateUser extends Command
     {
         $validator = Validator::make([key($rules) => $value], $rules);
 
-        if ($validator->fails())
+        if ($validator->fails()) {
             return $error = $validator->errors()->first(key($rules));
+        }
 
         return true;
-
     }
 }
