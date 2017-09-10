@@ -1,12 +1,16 @@
-# Easily create (and list) Laravel users with a CLI command
+# Easily create, list and remove Laravel users with a CLI command
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/boaideas/laravel-cli-create-user.svg?style=flat-square)](https://packagist.org/packages/boaideas/laravel-cli-create-user)
 [![Software License](https://img.shields.io/packagist/l/boaideas/laravel-cli-create-user.svg?style=flat-square)](LICENSE.md)
 [![StyleCI](https://styleci.io/repos/100930843/shield?branch=master)](https://styleci.io/repos/100930843)
 [![Total Downloads](https://img.shields.io/packagist/dt/boaideas/laravel-cli-create-user.svg?style=flat-square)](https://packagist.org/packages/boaideas/laravel-cli-create-user)
 
-In our projects we build a lot of admin systems for websites, and we use Laravel authentication for admin log-in to the system. Once the site is launched we always create admin accounts for our customers to log in to the production site.
+In our projects we build a lot of admin systems for websites, and we use Laravel authentication for admin log-in to the system. Once the site is launched we always create admin accounts for our customers to log in to the production site. So we needed an easy way to create Laravel users from the CLI.
 
-Using this artisan command it's easy to create admin accounts from the CLI whenever you need them. We also added a command to list all existing users.
+Using this artisan command it's easy to create Laravel users from the CLI whenever you need them.
+
+The command will validate the user details using Laravel's regular validation engine (which means you can create your own rules) and will even email the user their credentials (if you ask for it).
+
+We also added commands to list all existing users and to remove users.
 
 ## Requirements
 
@@ -73,7 +77,11 @@ From youe CLI execute:
 php artisan user:create
 ```
 
-You will be asked for the user's name, email and password, and then the user account will be created. Your input will be validated.
+You will be asked for the user's name, email and password, and then the user account will be created.
+
+Your input will be validated using Laravel's validation engine with Laravel's default user input rules (you can change the rules if you want).
+
+You will also be asked if you want to send an email to the newly created user with their credentials. If you do, the command will send a regular notification to the user's email, so make sure to update your app's mail settings.
 
 #### List Users
 From youe CLI execute:
@@ -81,6 +89,15 @@ From youe CLI execute:
 ```bash
 php artisan user:list
 ```
+
+#### Remove User
+From youe CLI execute:
+
+```bash
+php artisan user:remove {user_id}
+```
+
+The command will confirm that you want to remove that user and will remove it.
 
 ## Credits
 

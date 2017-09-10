@@ -27,6 +27,7 @@ class CreateUserServiceProvider extends ServiceProvider
         $this->commands([
             Commands\ListUsers::class,
             Commands\CreateUser::class,
+            Commands\RemoveUser::class,
         ]);
     }
 }
