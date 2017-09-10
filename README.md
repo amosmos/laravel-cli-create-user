@@ -4,11 +4,9 @@
 [![StyleCI](https://styleci.io/repos/100930843/shield?branch=master)](https://styleci.io/repos/100930843)
 [![Total Downloads](https://img.shields.io/packagist/dt/boaideas/laravel-cli-create-user.svg?style=flat-square)](https://packagist.org/packages/boaideas/laravel-cli-create-user)
 
-In our projects we build a lot of admin systems for websites, and we use Laravel authentication for admin log-in to the system. Once the site is launched we always create admin accounts for our customers to log in to the production site. So we needed an easy way to create Laravel users from the CLI.
-
 Using this artisan command it's easy to create Laravel users from the CLI whenever you need them.
 
-The command will validate the user details using Laravel's regular validation engine (which means you can create your own rules) and will even email the user their credentials (if you ask for it).
+The command will validate the user details using Laravel's regular validation engine (which means you can create your own rules) and will even *email the user their credentials* (if you ask for it).
 
 We also added commands to list all existing users and to remove users.
 
