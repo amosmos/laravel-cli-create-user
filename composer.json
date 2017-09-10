@@ -1,12 +1,14 @@
 {
     "name": "boaideas/laravel-cli-create-user",
-    "description": "An artisan command to create (and list) users in a laravel application from the cli",
+    "description": "An artisan command to create, list and remove users in a laravel application from the cli",
     "keywords": [
         "Laravel",
         "BOA Ideas",
         "user",
         "create",
         "list",
+        "remove",
+        "email",
         "cli",
         "artisan",
         "eloquent",
