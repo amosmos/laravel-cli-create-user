@@ -3,6 +3,7 @@
 namespace BOAIdeas\CreateUser\Commands;
 
 use Illuminate\Console\Command;
+use BOAIdeas\CreateUser\Notifications\UserAccountCreated as UserAccountCreatedNotification;
 use Validator;
 
 class CreateUser extends Command
@@ -43,6 +44,11 @@ class CreateUser extends Command
         $user->save();
 
         $this->info('New user created!');
+
+        if ($this->confirm('Do you wish to send the user a notification?')) {
+            $user->notify(new UserAccountCreatedNotification($password));
+            $this->info('Email sent.');
+        }
     }
 
     public function validate_ask($question, $rules)
