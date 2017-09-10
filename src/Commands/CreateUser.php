@@ -45,7 +45,7 @@ class CreateUser extends Command
 
         $this->info('New user created!');
 
-        if ($this->confirm('Do you wish to send the user a notification?')) {
+        if ($this->confirm('Do you wish to send the user a notification with their credentials?')) {
             $user->notify(new UserAccountCreatedNotification($password));
             $this->info('Email sent.');
         }
