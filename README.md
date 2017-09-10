@@ -71,7 +71,7 @@ return [
 ## Usage
 
 ### Create a new user
-From youe CLI execute:
+From your CLI execute:
 
 ```bash
 php artisan user:create
@@ -84,7 +84,7 @@ Your input will be validated using Laravel's validation engine with Laravel's de
 You will also be asked if you want to send an email to the newly created user with their credentials. If you do, the command will send a regular Laravel notification to the user's email, so make sure you've sert your app's mail settings.
 
 ### List all existing users
-From youe CLI execute:
+From your CLI execute:
 
 ```bash
 php artisan user:list
@@ -93,7 +93,7 @@ php artisan user:list
 You will be presented with a table of all existing users.
 
 ### Remove a user (by ID)
-From youe CLI execute:
+From your CLI execute:
 
 ```bash
 php artisan user:remove {user_id}
