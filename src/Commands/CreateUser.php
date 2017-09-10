@@ -2,8 +2,8 @@
 
 namespace BOAIdeas\CreateUser\Commands;
 
-use Illuminate\Console\Command;
 use BOAIdeas\CreateUser\Notifications\UserAccountCreated as UserAccountCreatedNotification;
+use Illuminate\Console\Command;
 use Validator;
 
 class CreateUser extends Command

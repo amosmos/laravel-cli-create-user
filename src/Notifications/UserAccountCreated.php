@@ -2,8 +2,8 @@
 
 namespace BOAIdeas\CreateUser\Notifications;
 
-use Illuminate\Notifications\Notification;
 use Illuminate\Notifications\Messages\MailMessage;
+use Illuminate\Notifications\Notification;
 
 class UserAccountCreated extends Notification
 {
@@ -17,7 +17,8 @@ class UserAccountCreated extends Notification
     /**
      * Create a notification instance.
      *
-     * @param  string  $password
+     * @param string $password
+     *
      * @return void
      */
     public function __construct($password)
@@ -28,7 +29,8 @@ class UserAccountCreated extends Notification
     /**
      * Get the notification's delivery channels.
      *
-     * @param  mixed  $notifiable
+     * @param mixed $notifiable
+     *
      * @return array
      */
     public function via($notifiable)
@@ -39,12 +41,13 @@ class UserAccountCreated extends Notification
     /**
      * Get the mail representation of the notification.
      *
-     * @param  mixed  $notifiable
+     * @param mixed $notifiable
+     *
      * @return \Illuminate\Notifications\Messages\MailMessage
      */
     public function toMail($notifiable)
     {
-        return (new MailMessage)
+        return (new MailMessage())
                     ->success()
                     ->greeting('Welcome!')
                     ->line('A user account has been created for you with the following information:')
