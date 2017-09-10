@@ -12,7 +12,7 @@ We also added commands to list all existing users and to remove users.
 
 ## Requirements
 
-The package is based on the defaul User model that ships with Laravel, so it assumes you're using a User model with name, email and password fields (and of course that these fields are migrated to your DB). Of course the package lets you change the default "User" model name if you're using a different name.
+The package is based on the defaul User model that ships with Laravel, so it assumes you're using a User model with name, email and password fields (you can name it anything you want).
 
 ## Installation
 
@@ -37,9 +37,9 @@ If you're using Laravel 5.4 or less, install the `BOAIdeas\CreateUser\CreateUser
 
 ## Configuration
 
-By default, the package assumes your User model is called User and validates your model input with the default validation rules that Laravel uses for uses creation.
+By default, the package assumes your User model is called User and validates your model input with the default rules that Laravel uses for users creation.
 
-If you want to change any of these settings, you can publish the config-file with:
+If you want to change any of these settings, you can publish the config file with:
 
 ```bash
 php artisan vendor:publish --provider="BOAIdeas\CreateUser\CreateUserServiceProvider"
