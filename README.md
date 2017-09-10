@@ -48,6 +48,8 @@ php artisan vendor:publish --provider="BOAIdeas\CreateUser\CreateUserServiceProv
 This is the content of the published config file:
 
 ```php
+// config/createuser.php
+
 return [
     /*
     * The class name of the media model to be used.
