@@ -22,7 +22,7 @@ You can install the package via composer:
 composer require boaideas/laravel-cli-create-user
 ```
 
-If you're installing the package on Laravel 5.5 or higher, you're done (The package uses Laravel's auto package discovery which will be available from version 5.5 onwards).
+If you're installing the package on Laravel 5.5 or higher, you're done (The package uses Laravel's auto package discovery).
 
 If you're using Laravel 5.4 or less, install the `BOAIdeas\CreateUser\CreateUserServiceProvider` service provider:
 
