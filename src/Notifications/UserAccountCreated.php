@@ -47,11 +47,11 @@ class UserAccountCreated extends Notification
         return (new MailMessage)
                     ->success()
                     ->greeting('Welcome!')
-                    ->line('A user account has been created for you.')
-                    ->line('Your user name: '.$notifiable->name)
-                    ->line('Your email address: '.$notifiable->email)
-                    ->line('Your password: '.$this->password)
+                    ->line('A user account has been created for you with the following information:')
+                    ->line('Your name: **'.$notifiable->name.'**')
+                    ->line('Your email address: **'.$notifiable->email.'**')
+                    ->line('Your password: **'.$this->password.'**')
                     ->action('Start here!', config('app.url'))
-                    ->line('Thank you for using our application!');
+                    ->line('Enjoy using our application!');
     }
 }
