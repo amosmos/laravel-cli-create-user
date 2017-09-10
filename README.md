@@ -12,7 +12,7 @@ We also added commands to list all existing users and to remove users.
 
 ## Requirements
 
-The package is based on the defaul User model that ships with Laravel, so it assumes you're using a User model with name, email and password fields (you can name it anything you want).
+The package is based on the defaul User model that ships with Laravel, so it assumes you're using a model with name, email and password fields (you can name it anything you want).
 
 ## Installation
 
