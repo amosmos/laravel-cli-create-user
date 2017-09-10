@@ -68,7 +68,7 @@ return [
 
 ## Usage
 
-#### Create User
+### Create User
 From youe CLI execute:
 
 ```bash
@@ -81,14 +81,14 @@ Your input will be validated using Laravel's validation engine with Laravel's de
 
 You will also be asked if you want to send an email to the newly created user with their credentials. If you do, the command will send a regular Laravel notification to the user's email, so make sure you've sert your app's mail settings.
 
-#### List Users
+### List Users
 From youe CLI execute:
 
 ```bash
 php artisan user:list
 ```
 
-#### Remove User
+### Remove User
 From youe CLI execute:
 
 ```bash
