@@ -35,12 +35,9 @@ class CreateUser extends Command
         if ($this->confirm('Do you wish to create a random password?')) {
             $password = str_random(8);
             $this->info('*The randomly created password is: '.$password);
-        }
-        else
-        {
+        } else {
             $password = $this->validate_ask('Enter user password', ['password' => config('createuser.validation_rules.password')]);
         }
-
 
         $model = config('createuser.model');
 
