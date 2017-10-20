@@ -6,9 +6,9 @@
 
 Using this artisan command it's easy to create Laravel users from the CLI whenever you need them. If you want, it will even email the user their credentials.
 
-The command will validate the user details using Laravel's regular validation engine (which means you can create your own rules).
+The command will validate the user details using Laravel's regular validation engine (which means you can create your own rules). If you want, the command can create a random password for you.
 
-We also added commands to list all existing users and to remove users.
+We also added commands to list all existing users and to easily remove users.
 
 ## Requirements
 
@@ -77,7 +77,7 @@ From your CLI execute:
 php artisan user:create
 ```
 
-You will be asked for the user's name, email and password, and then the user account will be created.
+You will be asked for the user's name, email and password, and then the user account will be created. If you choose, a random password will be created for you.
 
 Your input will be validated using Laravel's validation engine with Laravel's default user input rules (you can change the rules if you want).
 

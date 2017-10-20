@@ -29,9 +29,18 @@ class CreateUser extends Command
      */
     public function handle()
     {
-        $name = $this->validate_ask('User name', ['name' => config('createuser.validation_rules.name')]);
-        $email = $this->validate_ask('User email', ['email' => config('createuser.validation_rules.email')]);
-        $password = $this->validate_ask('User password', ['password' => config('createuser.validation_rules.password')]);
+        $name = $this->validate_ask('Enter user name', ['name' => config('createuser.validation_rules.name')]);
+        $email = $this->validate_ask('Enter user email', ['email' => config('createuser.validation_rules.email')]);
+
+        if ($this->confirm('Do you wish to create a random password?')) {
+            $password = str_random(8);
+            $this->info('*The randomly created password is: '.$password);
+        }
+        else
+        {
+            $password = $this->validate_ask('Enter user password', ['password' => config('createuser.validation_rules.password')]);
+        }
+
 
         $model = config('createuser.model');
 
