@@ -81,7 +81,8 @@ You will be asked for the user's name, email and password, and then the user acc
 
 Your input will be validated using Laravel's validation engine with Laravel's default user input rules (you can change the rules if you want).
 
-You will also be asked if you want to send an email to the newly created user with their credentials. If you do, the command will send a regular Laravel notification to the user's email, so make sure you've sert your app's mail settings.
+##### Email user credentials
+You will be asked if you want to send an email to the newly created user with their credentials. If you do, the command will send a regular Laravel notification to the user's email, so make sure you've sert your app's [mail settings](https://laravel.com/docs/master/mail). The notification is using the default APP_NAME, APP_URL, MAIL_FROM_ADDRESS and MAIL_FROM_NAME so make sure they're set correctly.
 
 ### List all existing users
 From your CLI execute:
