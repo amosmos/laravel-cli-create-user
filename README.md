@@ -35,39 +35,6 @@ If you're using Laravel 5.4 or less, add the `BOAIdeas\CreateUser\CreateUserServ
 ];
 ```
 
-## Configuration
-
-By default, the package assumes your User model is called User and validates your model input with the default rules that Laravel uses for users creation.
-
-If you want to change any of these settings, you can publish the config file with:
-
-```bash
-php artisan vendor:publish --provider="BOAIdeas\CreateUser\CreateUserServiceProvider"
-```
-
-This is the content of the published config file:
-
-```php
-// config/createuser.php
-
-return [
-    /*
-    * The class name of the media model to be used.
-    */
-    'model' => 'App\User',
-
-    /*
-    * The validation rules to check for user model input.
-    */
-    'validation_rules' => [
-    	'name' => 'string|max:255',
-    	'email' => 'string|email|max:255|unique:users',
-    	'password' => 'string|min:6',
-    ],
-
-];
-```
-
 ## Usage
 
 ### Create a new user
@@ -104,6 +71,39 @@ php artisan user:remove {user_id}
 ```
 
 The command will confirm that you want to remove that user and will remove it.
+
+## Configuration
+
+By default, the package assumes your User model is called User and validates your model input with the default rules that Laravel uses for users creation.
+
+If you want to change any of these settings, you can publish the config file with:
+
+```bash
+php artisan vendor:publish --provider="BOAIdeas\CreateUser\CreateUserServiceProvider"
+```
+
+This is the content of the published config file:
+
+```php
+// config/createuser.php
+
+return [
+    /*
+    * The class name of the media model to be used.
+    */
+    'model' => 'App\User',
+
+    /*
+    * The validation rules to check for user model input.
+    */
+    'validation_rules' => [
+    	'name' => 'string|max:255',
+    	'email' => 'string|email|max:255|unique:users',
+    	'password' => 'string|min:6',
+    ],
+
+];
+```
 
 ## Credits
 
