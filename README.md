@@ -89,7 +89,7 @@ This is the content of the published config file:
 
 return [
     /*
-    * The class name of the media model to be used.
+    * The class name of the user model to be used.
     */
     'model' => 'App\User',
 
