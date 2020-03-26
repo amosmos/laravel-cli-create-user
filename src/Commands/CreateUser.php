@@ -61,8 +61,7 @@ class CreateUser extends Command
     {
         if ($isSecret) {
             $value = $this->secret($question);
-        }
-        else {
+        } else {
             $value = $this->ask($question);
         }
 
