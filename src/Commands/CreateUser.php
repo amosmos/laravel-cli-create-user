@@ -36,7 +36,7 @@ class CreateUser extends Command
             $password = str_random(8);
             $this->info('*The randomly created password is: '.$password);
         } else {
-            $password = $this->validate_ask('Enter user password', ['password' => config('createuser.validation_rules.password')]);
+            $password = $this->validate_ask('Enter user password', ['password' => config('createuser.validation_rules.password')], true);
         }
 
         $model = config('createuser.model');
@@ -57,9 +57,13 @@ class CreateUser extends Command
         }
     }
 
-    public function validate_ask($question, $rules)
+    public function validate_ask($question, $rules, $isSecret = false)
     {
-        $value = $this->ask($question);
+        if ($isSecret) {
+            $value = $this->secret($question);
+        } else {
+            $value = $this->ask($question);
+        }
 
         $validate = $this->validateInput($rules, $value);
 
