@@ -4,6 +4,7 @@ namespace BOAIdeas\CreateUser\Commands;
 
 use BOAIdeas\CreateUser\Notifications\UserAccountCreated as UserAccountCreatedNotification;
 use Illuminate\Console\Command;
+use Illuminate\Support\Str;
 use Validator;
 
 class CreateUser extends Command
@@ -33,7 +34,7 @@ class CreateUser extends Command
         $email = $this->validate_ask('Enter user email', ['email' => config('createuser.validation_rules.email')]);
 
         if ($this->confirm('Do you wish to create a random password?')) {
-            $password = str_random(8);
+            $password = Str::random(8);
             $this->info('*The randomly created password is: '.$password);
         } else {
             $password = $this->validate_ask('Enter user password', ['password' => config('createuser.validation_rules.password')], true);
